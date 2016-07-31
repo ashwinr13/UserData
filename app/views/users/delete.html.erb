@@ -1,0 +1,35 @@
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+<h2> Create User</h2>
+
+
+<%= form_for @users, :url => {:action => 'destroy', :id => @users.id} do |f| %>
+
+
+<p> Are you sure you want to permanently delete this subject? </p>
+
+	<table>
+		<tr>
+			<th><%= f.label :firstname%></th>
+			<td><%= f.text_field :firstname  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :lastname%></th>
+			<td><%= f.text_field :lastname  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :age%></th>
+			<td><%= f.text_field :age  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :email%></th>
+			<td><%= f.text_field :email  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :favoritefood%> </th>
+			<td><%= f.text_field :favoritefood %></td>
+		</tr>
+	</table>
+
+	<%= submit_tag("Delete User") %>
+<% end %>
+	

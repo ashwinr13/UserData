@@ -1,0 +1,24 @@
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+
+<table>
+<tr>
+<th>First Name</th>
+<td><%= @users.firstname %></td>
+</tr>
+<tr>
+<th>Last Name</th>
+<td><%= @users.lastname %></td>
+</tr>
+<tr>
+<th>Age</th>
+<td><%= @users.age %></td>
+</tr>
+<tr>
+<th>Email</th>
+<td><%= @users.email %></td>
+</tr>
+<tr>
+<th>Favorite Food</th>
+<td><%= @users.favoritefood %></td>
+</tr>
+</table>

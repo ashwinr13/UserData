@@ -1,0 +1,39 @@
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+<h2> Update User</h2>
+
+
+<%= form_for @users, :url => {:action => 'create'} do |f| %>
+	<% if @users.errors.any? %>
+		<h2>Errors:</h2>
+		<ul>
+			<% @users.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+			<% end %>
+		</ul>
+<% end %>
+
+	<table>
+		<tr>
+			<th><%= f.label :firstname%></th>
+			<td><%= f.text_field :firstname  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :lastname%></th>
+			<td><%= f.text_field :lastname  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :age%></th>
+			<td><%= f.text_field :age  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :email%></th>
+			<td><%= f.text_field :email  %></td>
+		</tr>
+		<tr>
+			<th><%= f.label :favoritefood%> </th>
+			<td><%= f.text_field :favoritefood %></td>
+		</tr>
+	</table>
+
+	<%= submit_tag("Create User") %>
+<% end %>
